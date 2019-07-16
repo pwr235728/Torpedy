@@ -4,10 +4,10 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
-Comp ""
+Title "Układ zasilania wyrzutni torped"
+Date "2019-07-16"
+Rev "1"
+Comp "KN Robocik"
 Comment1 ""
 Comment2 ""
 Comment3 ""
@@ -18,7 +18,7 @@ L Device:Q_NMOS_GDS Q4
 U 1 1 5D2DDF8A
 P 10450 3750
 F 0 "Q4" V 10350 3800 50  0000 L CNN
-F 1 "N_MOS" V 10700 3650 50  0000 L CNN
+F 1 "IRL2203N" V 10700 3650 50  0000 L CNN
 F 2 "" H 10650 3850 50  0001 C CNN
 F 3 "~" H 10450 3750 50  0001 C CNN
 	1    10450 3750
@@ -129,7 +129,7 @@ Wire Wire Line
 Connection ~ 9850 3250
 Text GLabel 10550 2950 1    50   Input ~ 0
 PowerBank
-Text GLabel 6950 3100 2    50   Input ~ 0
+Text GLabel 6600 3250 2    50   Input ~ 0
 PowerBank
 $Comp
 L Connector_Generic:Conn_01x02 J7
@@ -176,7 +176,7 @@ L Device:D_TVS D3
 U 1 1 5D2E3000
 P 10900 3700
 F 0 "D3" H 10850 3600 50  0000 L CNN
-F 1 "TVS_30V" H 10750 3800 50  0000 L CNN
+F 1 "TVS_24V" H 10750 3800 50  0000 L CNN
 F 2 "" H 10900 3700 50  0001 C CNN
 F 3 "~" H 10900 3700 50  0001 C CNN
 	1    10900 3700
@@ -203,65 +203,47 @@ Wire Wire Line
 $Comp
 L Device:CP C6
 U 1 1 5D2E6268
-P 7400 3450
-F 0 "C6" V 7250 3400 50  0000 L CNN
-F 1 "2200u" V 7550 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 7438 3300 50  0001 C CNN
-F 3 "~" H 7400 3450 50  0001 C CNN
-	1    7400 3450
-	1    0    0    -1  
+P 5650 3050
+F 0 "C6" V 5500 3000 50  0000 L CNN
+F 1 "2200u" V 5800 2950 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 5688 2900 50  0001 C CNN
+F 3 "~" H 5650 3050 50  0001 C CNN
+	1    5650 3050
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:CP C5
 U 1 1 5D2E6386
-P 7000 3450
-F 0 "C5" V 6850 3400 50  0000 L CNN
-F 1 "2200u" V 7150 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 7038 3300 50  0001 C CNN
-F 3 "~" H 7000 3450 50  0001 C CNN
-	1    7000 3450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:CP C4
-U 1 1 5D2E648C
-P 6600 3450
-F 0 "C4" V 6450 3400 50  0000 L CNN
-F 1 "2200u" V 6750 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6638 3300 50  0001 C CNN
-F 3 "~" H 6600 3450 50  0001 C CNN
-	1    6600 3450
-	1    0    0    -1  
+P 6050 3050
+F 0 "C5" V 5900 3000 50  0000 L CNN
+F 1 "2200u" V 6200 2950 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6088 2900 50  0001 C CNN
+F 3 "~" H 6050 3050 50  0001 C CNN
+	1    6050 3050
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:CP C3
 U 1 1 5D2E64D4
-P 6200 3450
-F 0 "C3" V 6050 3400 50  0000 L CNN
-F 1 "2200u" V 6350 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6238 3300 50  0001 C CNN
-F 3 "~" H 6200 3450 50  0001 C CNN
-	1    6200 3450
+P 6450 3450
+F 0 "C3" V 6300 3400 50  0000 L CNN
+F 1 "2200u" V 6600 3350 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6488 3300 50  0001 C CNN
+F 3 "~" H 6450 3450 50  0001 C CNN
+	1    6450 3450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 3250 6200 3300
 $Comp
 L power:GNDA #PWR0103
 U 1 1 5D2E7DE1
-P 6200 3750
-F 0 "#PWR0103" H 6200 3500 50  0001 C CNN
-F 1 "GNDA" H 6205 3577 50  0000 C CNN
-F 2 "" H 6200 3750 50  0001 C CNN
-F 3 "" H 6200 3750 50  0001 C CNN
-	1    6200 3750
+P 6250 3750
+F 0 "#PWR0103" H 6250 3500 50  0001 C CNN
+F 1 "GNDA" H 6255 3577 50  0000 C CNN
+F 2 "" H 6250 3750 50  0001 C CNN
+F 3 "" H 6250 3750 50  0001 C CNN
+	1    6250 3750
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	6200 3650 6200 3600
-Wire Wire Line
-	6200 3750 6200 3650
-Connection ~ 6200 3650
 $Comp
 L Device:R R8
 U 1 1 5D2EB579
@@ -273,7 +255,7 @@ F 3 "~" H 5150 3250 50  0001 C CNN
 	1    5150 3250
 	0    -1   -1   0   
 $EndComp
-Text Notes 5100 3000 0    50   ~ 0
+Text Notes 4800 3150 1    50   ~ 0
 30V - 300mA ??
 $Comp
 L Connector_Generic:Conn_01x02 J3
@@ -290,8 +272,6 @@ Wire Wire Line
 	4500 3250 4900 3250
 Wire Wire Line
 	4500 3350 4900 3350
-Wire Wire Line
-	4900 3350 4900 3650
 $Comp
 L power:VCC #PWR0104
 U 1 1 5D2EEC68
@@ -345,7 +325,7 @@ L Device:Q_NMOS_GDS Q2
 U 1 1 5D2FE01E
 P 2800 3650
 F 0 "Q2" V 2700 3700 50  0000 L CNN
-F 1 "N_MOS" V 3050 3550 50  0000 L CNN
+F 1 "IRL2203N" V 3050 3550 50  0000 L CNN
 F 2 "" H 3000 3750 50  0001 C CNN
 F 3 "~" H 2800 3650 50  0001 C CNN
 	1    2800 3650
@@ -785,43 +765,25 @@ Wire Wire Line
 $Comp
 L Device:CP C2
 U 1 1 5D44DEA8
-P 5800 3450
-F 0 "C2" V 5650 3400 50  0000 L CNN
-F 1 "2200u" V 5950 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 5838 3300 50  0001 C CNN
-F 3 "~" H 5800 3450 50  0001 C CNN
-	1    5800 3450
+P 6050 3450
+F 0 "C2" V 5900 3400 50  0000 L CNN
+F 1 "2200u" V 6200 3350 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6088 3300 50  0001 C CNN
+F 3 "~" H 6050 3450 50  0001 C CNN
+	1    6050 3450
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:CP C1
 U 1 1 5D44DF18
-P 5400 3450
-F 0 "C1" V 5250 3400 50  0000 L CNN
-F 1 "2200u" V 5550 3350 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 5438 3300 50  0001 C CNN
-F 3 "~" H 5400 3450 50  0001 C CNN
-	1    5400 3450
+P 5650 3450
+F 0 "C1" V 5500 3400 50  0000 L CNN
+F 1 "2200u" V 5800 3350 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 5688 3300 50  0001 C CNN
+F 3 "~" H 5650 3450 50  0001 C CNN
+	1    5650 3450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5800 3300 5800 3250
-Connection ~ 5800 3250
-Wire Wire Line
-	5800 3250 6200 3250
-Wire Wire Line
-	5400 3300 5400 3250
-Wire Wire Line
-	5400 3250 5800 3250
-Wire Wire Line
-	5400 3600 5400 3650
-Wire Wire Line
-	5400 3650 5800 3650
-Wire Wire Line
-	5800 3600 5800 3650
-Connection ~ 5800 3650
-Wire Wire Line
-	5800 3650 6200 3650
 $Comp
 L Isolator:LTV-817 U3
 U 1 1 5D47071C
@@ -1067,51 +1029,12 @@ Text Notes 4450 700  0    59   ~ 12
 Złącza zasilania i sygnałów\n
 Text Notes 7950 700  0    59   ~ 12
 Przyłącze przewodu od torped
-Connection ~ 6200 3250
-Wire Wire Line
-	7400 3600 7400 3650
-Wire Wire Line
-	7400 3650 7000 3650
-Connection ~ 7000 3650
-Wire Wire Line
-	7000 3600 7000 3650
-Wire Wire Line
-	7000 3650 6600 3650
-Wire Wire Line
-	6600 3650 6200 3650
-Connection ~ 6600 3650
-Wire Wire Line
-	6600 3600 6600 3650
-Wire Wire Line
-	7400 3300 7400 3250
-Wire Wire Line
-	7400 3250 7000 3250
-Connection ~ 7000 3250
-Wire Wire Line
-	7000 3300 7000 3250
-Wire Wire Line
-	7000 3250 6600 3250
-Wire Wire Line
-	6600 3250 6200 3250
-Connection ~ 6600 3250
-Wire Wire Line
-	6600 3300 6600 3250
-Wire Wire Line
-	5400 3650 4900 3650
-Connection ~ 5400 3650
-Wire Wire Line
-	5300 3250 5400 3250
-Connection ~ 5400 3250
 Wire Wire Line
 	9850 3750 10150 3750
 Connection ~ 10150 3750
 Wire Wire Line
 	10150 4150 9850 4150
 Connection ~ 10150 4150
-Wire Wire Line
-	6950 3100 6600 3100
-Wire Wire Line
-	6600 3100 6600 3250
 Wire Notes Line
 	7850 2200 7850 4550
 Wire Notes Line
@@ -1131,6 +1054,88 @@ F 3 "~" H 9850 3950 50  0001 C CNN
 	1    9850 3950
 	0    1    1    0   
 $EndComp
-Text Notes 6000 2750 0    79   ~ 16
+Text Notes 5650 2750 0    79   ~ 16
 C: \nSrednica: >16mm\nwysokosc: >36mm\nrozstaw: <8mm
+$Comp
+L Device:CP C7
+U 1 1 5D761C77
+P 6450 3050
+F 0 "C7" V 6300 3000 50  0000 L CNN
+F 1 "2200u" V 6600 2950 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D16.0mm_P7.50mm" H 6488 2900 50  0001 C CNN
+F 3 "~" H 6450 3050 50  0001 C CNN
+	1    6450 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5650 3600 5650 3700
+Wire Wire Line
+	5650 3700 6050 3700
+Wire Wire Line
+	6250 3750 6250 3700
+Connection ~ 6250 3700
+Wire Wire Line
+	6250 3700 6450 3700
+Wire Wire Line
+	6450 3600 6450 3700
+Wire Wire Line
+	6050 3600 6050 3700
+Connection ~ 6050 3700
+Wire Wire Line
+	6050 3700 6250 3700
+Wire Wire Line
+	6450 3200 6450 3250
+Connection ~ 6450 3250
+Wire Wire Line
+	6450 3300 6450 3250
+Wire Wire Line
+	6050 3300 6050 3250
+Connection ~ 6050 3250
+Wire Wire Line
+	6050 3250 6450 3250
+Wire Wire Line
+	6050 3250 6050 3200
+Wire Wire Line
+	5650 3200 5650 3250
+Connection ~ 5650 3250
+Wire Wire Line
+	5650 3250 6050 3250
+Wire Wire Line
+	5650 3250 5650 3300
+Wire Wire Line
+	4900 3350 4900 3700
+Connection ~ 5650 3700
+Wire Wire Line
+	5650 2900 5650 2850
+Wire Wire Line
+	5650 2850 6050 2850
+Wire Wire Line
+	6450 2900 6450 2850
+Connection ~ 6450 2850
+Wire Wire Line
+	6050 2900 6050 2850
+Connection ~ 6050 2850
+Wire Wire Line
+	6050 2850 6450 2850
+$Comp
+L power:GNDA #PWR01
+U 1 1 5D7F7A14
+P 6800 2900
+F 0 "#PWR01" H 6800 2650 50  0001 C CNN
+F 1 "GNDA" H 6805 2727 50  0000 C CNN
+F 2 "" H 6800 2900 50  0001 C CNN
+F 3 "" H 6800 2900 50  0001 C CNN
+	1    6800 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2900 6800 2850
+Wire Wire Line
+	6450 3250 6600 3250
+Wire Wire Line
+	6450 2850 6800 2850
+Wire Wire Line
+	5300 3250 5650 3250
+Wire Wire Line
+	4900 3700 5650 3700
 $EndSCHEMATC
