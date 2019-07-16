@@ -1,0 +1,7 @@
+niebieski + ekran = gnd cewki
+brązowy + czerwony + różowy = V+ cewki
+
+zielony = PWM servo
+żółty = V+ serwa
+szary = kontaktorn
+biały = masa servo + masa kontaktron
