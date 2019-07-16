@@ -335,7 +335,7 @@ L Connector_Generic:Conn_01x02 J?
 U 1 1 5D2F760C
 P 6100 1350
 F 0 "J?" V 6100 1450 50  0000 C CNN
-F 1 "Vbatt - moc" V 6200 1300 50  0000 C CNN
+F 1 "Vbatt - zasilanie cewki" V 6200 1300 50  0000 C CNN
 F 2 "" H 6100 1350 50  0001 C CNN
 F 3 "~" H 6100 1350 50  0001 C CNN
 	1    6100 1350
@@ -1075,7 +1075,7 @@ Wire Notes Line
 Wire Notes Line
 	7850 700  7850 2100
 Text Notes 4450 700  0    59   ~ 12
-Złącza zasilania
+Złącza zasilania i sygnałów\n
 Text Notes 7950 700  0    59   ~ 12
 Przyłącze przewodu od torped
 Connection ~ 6200 3250
