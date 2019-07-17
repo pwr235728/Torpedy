@@ -116,7 +116,7 @@ L Device:R R8
 U 1 1 5D2EB579
 P 5500 3300
 F 0 "R8" V 5385 3300 50  0000 C CNN
-F 1 "150" V 5294 3300 50  0000 C CNN
+F 1 "300" V 5294 3300 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 5430 3300 50  0001 C CNN
 F 3 "~" H 5500 3300 50  0001 C CNN
 	1    5500 3300
@@ -124,8 +124,6 @@ F 3 "~" H 5500 3300 50  0001 C CNN
 $EndComp
 Text Notes 4800 2950 2    50   ~ 0
 27V - 300mA ??
-Wire Wire Line
-	5250 2750 5250 3050
 Wire Wire Line
 	5250 3300 5350 3300
 Wire Notes Line
@@ -256,11 +254,11 @@ Text GLabel 9950 1350 0    39   Input ~ 0
 Cewka+
 Text GLabel 9950 1450 0    39   Input ~ 0
 Cewka-
-Text GLabel 9000 1600 0    39   Input ~ 0
+Text GLabel 9000 1300 0    39   Input ~ 0
 PWM_serwo
 Text GLabel 9000 1500 0    39   Input ~ 0
 V+_serwo
-Text GLabel 9000 1300 0    39   Input ~ 0
+Text GLabel 9000 1600 0    39   Input ~ 0
 -BATT
 Text GLabel 9000 1400 0    39   Output ~ 0
 reed_switch
@@ -553,17 +551,6 @@ F 3 "" H 2700 4200 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+BATT #PWR0105
-U 1 1 5D2FBF16
-P 5250 2750
-F 0 "#PWR0105" H 5250 2600 50  0001 C CNN
-F 1 "+BATT" H 5265 2923 50  0000 C CNN
-F 2 "" H 5250 2750 50  0001 C CNN
-F 3 "" H 5250 2750 50  0001 C CNN
-	1    5250 2750
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:-BATT #PWR0106
 U 1 1 5D2FC313
 P 7500 3800
@@ -807,9 +794,9 @@ Wire Wire Line
 	5100 1450 4950 1450
 Connection ~ 4950 1450
 Wire Wire Line
-	6950 1350 6850 1350
+	6950 1450 6850 1450
 Wire Wire Line
-	6950 1250 6850 1250
+	6950 1350 6850 1350
 Wire Wire Line
 	4900 1350 5100 1350
 $Comp
@@ -834,7 +821,7 @@ F 3 "" H 6250 1550 50  0001 C CNN
 	1    6250 1550
 	-1   0    0    1   
 $EndComp
-Text GLabel 6950 1250 2    39   Input ~ 0
+Text GLabel 6950 1550 2    39   Input ~ 0
 RPi_reed_switch
 $Comp
 L power:+BATT #PWR0101
@@ -847,32 +834,30 @@ F 3 "" H 6250 1250 50  0001 C CNN
 	1    6250 1250
 	1    0    0    -1  
 $EndComp
-Text GLabel 6950 1350 2    39   Output ~ 0
+Text GLabel 6950 1650 2    39   Output ~ 0
 RPi_serwo_pwm
 $Comp
 L power:GNDD #PWR0118
 U 1 1 5D540B85
-P 7050 1700
-F 0 "#PWR0118" H 7050 1450 50  0001 C CNN
-F 1 "GNDD" H 7054 1545 50  0000 C CNN
-F 2 "" H 7050 1700 50  0001 C CNN
-F 3 "" H 7050 1700 50  0001 C CNN
-	1    7050 1700
-	-1   0    0    -1  
+P 7050 1100
+F 0 "#PWR0118" H 7050 850 50  0001 C CNN
+F 1 "GNDD" H 7054 945 50  0000 C CNN
+F 2 "" H 7050 1100 50  0001 C CNN
+F 3 "" H 7050 1100 50  0001 C CNN
+	1    7050 1100
+	1    0    0    1   
 $EndComp
-Wire Wire Line
-	7050 1150 7050 1100
 Wire Wire Line
 	6850 1150 7050 1150
 $Comp
 L power:+3V3 #PWR0117
 U 1 1 5D53B98C
-P 7050 1100
-F 0 "#PWR0117" H 7050 950 50  0001 C CNN
-F 1 "+3V3" H 7065 1273 50  0000 C CNN
-F 2 "" H 7050 1100 50  0001 C CNN
-F 3 "" H 7050 1100 50  0001 C CNN
-	1    7050 1100
+P 7300 1100
+F 0 "#PWR0117" H 7300 950 50  0001 C CNN
+F 1 "+3V3" H 7315 1273 50  0000 C CNN
+F 2 "" H 7300 1100 50  0001 C CNN
+F 3 "" H 7300 1100 50  0001 C CNN
+	1    7300 1100
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
@@ -932,9 +917,9 @@ Wire Wire Line
 	8500 4200 8500 3450
 Text GLabel 8500 3250 0    59   Input ~ 0
 Trigger
-Text GLabel 6950 1550 2    39   Output ~ 0
-Trigger
 Text GLabel 6950 1450 2    39   Output ~ 0
+Trigger
+Text GLabel 6950 1350 2    39   Output ~ 0
 Charger_R.C.
 $Comp
 L Connector_Generic:Conn_01x06 J1
@@ -948,13 +933,9 @@ F 3 "~" H 6650 1350 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7050 1700 7050 1650
+	6950 1650 6850 1650
 Wire Wire Line
-	7050 1650 6850 1650
-Wire Wire Line
-	6950 1550 6850 1550
-Wire Wire Line
-	6850 1450 6950 1450
+	6850 1550 6950 1550
 $Comp
 L Connector_Generic:Conn_01x04 J6
 U 1 1 5D4EF1C6
@@ -1043,7 +1024,7 @@ L Device:R R14
 U 1 1 5D5C45A5
 P 5500 3050
 F 0 "R14" V 5707 3050 50  0000 C CNN
-F 1 "150" V 5616 3050 50  0000 C CNN
+F 1 "300" V 5616 3050 50  0000 C CNN
 F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 5430 3050 50  0001 C CNN
 F 3 "~" H 5500 3050 50  0001 C CNN
 	1    5500 3050
@@ -1054,42 +1035,21 @@ Wire Wire Line
 Connection ~ 6350 3750
 Wire Wire Line
 	5350 3050 5250 3050
-Connection ~ 5250 3050
 Wire Wire Line
 	5250 3050 5250 3200
 Wire Wire Line
-	6050 3300 6100 3300
-$Comp
-L Device:R R16
-U 1 1 5D5DBF1F
-P 5900 3300
-F 0 "R16" V 5785 3300 50  0000 C CNN
-F 1 "150" V 5694 3300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 5830 3300 50  0001 C CNN
-F 3 "~" H 5900 3300 50  0001 C CNN
-	1    5900 3300
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R15
-U 1 1 5D5DBD8D
-P 5900 3050
-F 0 "R15" V 6107 3050 50  0000 C CNN
-F 1 "150" V 6016 3050 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0414_L11.9mm_D4.5mm_P20.32mm_Horizontal" V 5830 3050 50  0001 C CNN
-F 3 "~" H 5900 3050 50  0001 C CNN
-	1    5900 3050
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
 	6100 3300 6100 3050
-Wire Wire Line
-	6100 3050 6050 3050
 Connection ~ 6100 3300
 Wire Wire Line
 	6100 3300 6350 3300
 Wire Wire Line
-	5650 3300 5750 3300
+	7050 1150 7050 1100
 Wire Wire Line
-	5650 3050 5750 3050
+	7300 1100 7300 1250
+Wire Wire Line
+	7300 1250 6850 1250
+Wire Wire Line
+	5650 3050 6100 3050
+Wire Wire Line
+	5650 3300 6100 3300
 $EndSCHEMATC
