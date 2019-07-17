@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:torpedy-cache
-EELAYER 29 0
+EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -932,9 +932,9 @@ Wire Wire Line
 	8500 4200 8500 3450
 Text GLabel 8500 3250 0    59   Input ~ 0
 Trigger
-Text GLabel 6950 1450 2    39   Output ~ 0
-Trigger
 Text GLabel 6950 1550 2    39   Output ~ 0
+Trigger
+Text GLabel 6950 1450 2    39   Output ~ 0
 Charger_R.C.
 $Comp
 L Connector_Generic:Conn_01x06 J1
